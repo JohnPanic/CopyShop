@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e7e6df">
+  <title>COPYSHOP — Experimental Typography Copier</title>
+  <meta name="description" content="A seeded, procedural photocopy degradation tool for typography.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">C</span><h1>COPYSHOP</h1><span class="version">01—PROCEDURAL COPIER</span></div>
+    <div class="top-actions"><span id="status" class="status">SOURCE READY</span><button id="randomize" class="button button-subtle">RANDOMIZE</button><button id="export" class="button button-dark">EXPORT PNG ↓</button></div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="controls">
+      <section class="control-section source-controls">
+        <h2><span>01</span> TYPE SOURCE</h2>
+        <label class="stacked">TEXT<textarea id="text" rows="6" spellcheck="true">THIS LAND IS MINE,
+THIS LAND IS FREE.
+THE MACHINE REMEMBERS
+EVERY COPY.</textarea></label>
+        <div class="control-grid">
+          <label>FONT<select id="font"><option value="Arial Black">Arial Black</option><option value="Impact">Impact</option><option value="Helvetica">Helvetica</option><option value="Arial">Arial</option><option value="Georgia">Georgia</option><option value="Courier New">Courier New</option></select></label>
+          <label>ALIGN<select id="align"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select></label>
+        </div>
+        <div id="typeControls"></div>
+      </section>
+
+      <section class="control-section">
+        <h2><span>02</span> MACHINE</h2>
+        <div id="machineControls"></div>
+      </section>
+
+      <section class="control-section seed-row">
+        <h2><span>03</span> RUN</h2>
+        <label>SEED<input id="seed" type="text" value="copyshop-001" maxlength="64"></label>
+        <div class="button-pair"><button id="copy" class="button button-red">COPY</button><button id="copyOfCopy" class="button button-outline">COPY OF COPY</button></div>
+        <p class="hint">COPY starts from clean type. COPY OF COPY feeds the result back through the machine.</p>
+      </section>
+    </aside>
+
+    <section class="workspace" aria-label="Copy previews">
+      <div class="workspace-heading"><div><span class="kicker">OUTPUT MONITOR</span><h2>Source / Result</h2></div><div class="run-data"><span>GEN <b id="generation">00</b></span><span>SEED <b id="seedReadout">copyshop-001</b></span></div></div>
+      <div class="canvases">
+        <figure><figcaption><span>SOURCE</span><small>clean raster</small></figcaption><div class="canvas-wrap"><canvas id="sourceCanvas"></canvas></div></figure>
+        <figure><figcaption><span>DEGRADED</span><small id="resultLabel">awaiting copy</small></figcaption><div class="canvas-wrap result"><canvas id="resultCanvas"></canvas></div></figure>
+      </div>
+      <footer class="meter-strip"><span>HIGH RESOLUTION RASTER</span><span>100% PROCEDURAL / NO TEXTURE OVERLAYS</span><span id="dimensions">—</span></footer>
+    </section>
+  </main>
+</body>
+</html>
