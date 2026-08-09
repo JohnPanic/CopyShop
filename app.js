@@ -1,4 +1,4 @@
-import{CopyEngine}from'./degradation-engine.js';
+import{CopyEngine}from'./degradation-engine.js?v=20260809-2';
 const $=s=>document.querySelector(s),engine=new CopyEngine(),source=$('#sourceCanvas'),result=$('#resultCanvas');let current=null,generation=0,selections=[],activeSelection=-1,pendingRange=null,previousText=$('#text').value;
 const typeDefs=[['size','SIZE',94,24,180,'px'],['leading','LEADING',92,70,150,'%'],['tracking','TRACKING',0,-8,30,'px'],['width','WIDTH',980,500,1400,'px'],['padding','PADDING',90,20,220,'px']];
 const machineDefs=[['threshold','CONTRAST / THRESHOLD',53,0,100,''],['tonerDensity','TONER DENSITY',58,0,100,''],['inkBleed','INK BLEED',22,0,100,''],['cornerRoundness','CORNER ROUNDNESS',28,0,100,''],['erosion','EROSION',12,0,100,''],['dropout','DROPOUT',16,0,100,''],['edgeRoughness','EDGE ROUGHNESS',27,0,100,''],['grain','GRAIN',24,0,100,''],['localDistortion','LOCAL DISTORTION',10,0,100,''],['characterFailure','CHARACTER FAILURE',8,0,100,''],['copyCount','GENERATIONAL COPY COUNT',1,1,8,'×']];
