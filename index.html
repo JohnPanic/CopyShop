@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#e7e6df">
   <title>COPYSHOP — Experimental Typography Copier</title>
   <meta name="description" content="A seeded, procedural photocopy degradation tool for typography.">
-  <link rel="stylesheet" href="styles.css?v=20260809-2">
-  <script type="module" src="app.js?v=20260809-3"></script>
+  <link rel="stylesheet" href="styles.css?v=20260809-4">
+  <script type="module" src="app.js?v=20260809-4"></script>
 </head>
 <body>
   <header class="topbar">
@@ -45,9 +45,8 @@ EVERY COPY.</textarea></label>
       <section class="control-section seed-row">
         <h2><span>03</span> RUN</h2>
         <label>SEED<input id="seed" type="text" value="copyshop-001" maxlength="64"></label>
-        <div class="button-pair"><button id="copy" class="button button-red">COPY</button><button id="copyOfCopy" class="button button-outline">COPY OF COPY</button></div>
-        <p class="hint">COPY starts from clean type. COPY OF COPY feeds the result back through the machine.</p>
       </section>
+      <div class="copy-dock"><div class="button-pair"><button id="copy" class="button button-red">COPY</button><button id="copyOfCopy" class="button button-outline">COPY OF COPY</button></div><p class="hint">Live preview is reduced resolution. COPY renders the full-size output.</p></div>
     </aside>
 
     <section class="workspace" aria-label="Copy previews">
