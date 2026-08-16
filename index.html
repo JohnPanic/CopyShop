@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#e7e6df">
   <title>WRECKTYPE — Experimental Typography Copier</title>
   <meta name="description" content="WRECKTYPE is a seeded, procedural photocopy degradation tool for typography.">
-  <link rel="stylesheet" href="styles.css?v=20260809-4">
-  <script type="module" src="app.js?v=20260809-4"></script>
+  <link rel="stylesheet" href="styles.css?v=20260816-1">
+  <script type="module" src="app.js?v=20260816-1"></script>
 </head>
 <body>
   <header class="topbar">
@@ -34,6 +34,7 @@ EVERY COPY.</textarea></label>
           <label>FONT<select id="font"><option value="Arial Black">Arial Black</option><option value="Impact">Impact</option><option value="Helvetica">Helvetica</option><option value="Arial">Arial</option><option value="Georgia">Georgia</option><option value="Courier New">Courier New</option></select></label>
           <label>ALIGN<select id="align"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select></label>
         </div>
+        <label class="font-loader" for="fontUpload"><input id="fontUpload" type="file" accept=".otf,.ttf,.woff,.woff2,font/otf,font/ttf,font/woff,font/woff2"><span>OPEN LOCAL FONT</span><small>OTF, TTF, WOFF or WOFF2 · 10 MB max · stays on this device</small></label>
         <div id="typeControls"></div>
       </section>
 
